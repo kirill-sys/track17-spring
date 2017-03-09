@@ -88,17 +88,6 @@ public class CountWords {
     }
 
     public static void main(String[] args) {
-        File file = new File("words.txt");
-        CountWords cw = new CountWords();
-        try {
-            System.out.println(cw.concatWords(file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        try {
-            System.out.println(cw.countNumbers(file));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
     }
 }
