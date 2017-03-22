@@ -22,7 +22,7 @@ public class CountWordsTest {
     @Test
     public void countNumbers() throws Exception {
         CountWords countWords = new CountWords();
-        Assert.assertEquals(42, countWords.countNumbers(file));
+        Assert.assertEquals(31, countWords.countNumbers(file));
     }
 
     @Test
