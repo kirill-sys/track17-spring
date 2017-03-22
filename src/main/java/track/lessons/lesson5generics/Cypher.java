@@ -20,9 +20,9 @@ public class Cypher {
                     ch += SYMBOL_DIST;
                 }
 
-                if( map.containsKey(ch)){
+                if (map.containsKey(ch)) {
                     map.replace(ch, map.get(ch), map.get(ch) + 1);
-                } else{
+                } else {
                     map.put(ch, 1);
                 }
                 // Если это буква, то собираем частотную информацию
@@ -75,7 +75,7 @@ public class Cypher {
         String result = "";
         System.out.println(encrypted);
         for (int i = 0; i < encrypted.length(); ++i) {
-            if( out.indexOf(encrypted.charAt(i)) != -1 && out.indexOf(encrypted.charAt(i)) < in.size())
+            if (out.indexOf(encrypted.charAt(i)) != -1 && out.indexOf(encrypted.charAt(i)) < in.size())
                 result += in.get(out.indexOf(encrypted.charAt(i)));
             else
                 result += encrypted.charAt(i);
