@@ -42,7 +42,8 @@ public class Cypher {
      * У java.lang.List есть вспомогательный метод {@link List#sort(Comparator)}
      * Где Comparator - это логика сравнения объектов.
      * <p>
-     * 3. После того, как получен отсортированный список {@code List<Map.Entry<Character, Integer>>} нужно превратить его
+     * 3. После того, как получен отсортированный список {@code List<Map.Entry<Character, Integer>>}
+     * нужно превратить его
      * обратно в Map для того, чтобы иметь быстрый доступ get().
      */
     public Map<Character, Integer> buildHist(String data) {
@@ -75,10 +76,11 @@ public class Cypher {
         String result = "";
         System.out.println(encrypted);
         for (int i = 0; i < encrypted.length(); ++i) {
-            if (out.indexOf(encrypted.charAt(i)) != -1 && out.indexOf(encrypted.charAt(i)) < in.size())
+            if (out.indexOf(encrypted.charAt(i)) != -1 && out.indexOf(encrypted.charAt(i)) < in.size()) {
                 result += in.get(out.indexOf(encrypted.charAt(i)));
-            else
+            } else {
                 result += encrypted.charAt(i);
+            }
         }
         return result;
     }
