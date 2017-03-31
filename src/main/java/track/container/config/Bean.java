@@ -24,6 +24,7 @@ public class Bean {
         this.className = className;
         this.properties = properties;
     }
+
     public Bean() {
 
     }
