@@ -24,6 +24,9 @@ public class Bean {
         this.className = className;
         this.properties = properties;
     }
+    public Bean() {
+
+    }
 
     public Map<String, Property> getProperties() {
         return properties;
