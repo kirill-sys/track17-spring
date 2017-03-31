@@ -22,7 +22,7 @@ public class ContainerTest {
         List<Bean> beans = reader.parseBeans(new File("src/main/resources/config.json"));
         Container container = new Container(beans);
         Car car = (Car) container.getById("carBean");
-        compareFields(car);
+        checkFields(car);
     }
 
     @Test
@@ -31,10 +31,10 @@ public class ContainerTest {
         List<Bean> beans = reader.parseBeans(new File("src/main/resources/config.json"));
         Container container = new Container(beans);
         Car car = (Car) container.getByClass("track.container.beans.Car");
-        compareFields(car);
+        checkFields(car);
     }
 
-    private void compareFields(Car car) {
+    private void checkFields(Car car) {
         Gear gear = car.getGear();
         Engine engine = car.getEngine();
         Assert.assertEquals(6, gear.getCount());

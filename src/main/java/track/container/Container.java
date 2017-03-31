@@ -72,7 +72,7 @@ public class Container {
                 valueType = clazz.getDeclaredField(entry.getValue().getName()).getType();
                 value = parseValueTo(entry.getValue().getValue(), valueType);
             }
-            Method setter = clazz.getDeclaredMethod("set" + entry.getKey().substring(0, 1).toUpperCase() +
+            Method setter = clazz.getDeclaredMethod("set" + entry.getKey().toUpperCase().charAt(0) +
                     entry.getKey().substring(1), valueType);
             setter.invoke(instance, value);
         }
