@@ -13,41 +13,38 @@ public class MyArrayList extends List {
 
     private static final int DEFAULT_CAPACITY = 16;
 
-    private int capacity;
-    private int[] array;
+    private int[] buffer;
 
     public MyArrayList() {
-        capacity = DEFAULT_CAPACITY;
-        array = new int[capacity];
+        buffer = new int[DEFAULT_CAPACITY];
     }
 
     public MyArrayList(int capacity) {
-        this.capacity = capacity;
-        array = new int[capacity];
+        buffer = new int[capacity];
     }
 
     @Override
     void add(int item) {
-        if (capacity == 0) {
-            capacity = DEFAULT_CAPACITY;
-            array = new int[capacity];
+        if (buffer.length == 0) {
+            buffer = new int[DEFAULT_CAPACITY];
         }
-        if (size + 1 >= capacity) {
-            capacity *= 2;
-            int[] tmpArray = new int[capacity];
-            System.arraycopy(array, 0, tmpArray, 0, size);
-            array = tmpArray;
+        if (size + 1 >= buffer.length) {
+            int tmpLength = buffer.length;
+            tmpLength *= 2;
+            int[] tmpArray = new int[tmpLength];
+            System.arraycopy(buffer, 0, tmpArray, 0, size);
+            buffer = tmpArray;
         }
-        array[size] = item;
+        buffer[size] = item;
         ++size;
     }
 
     @Override
     int remove(int idx) throws NoSuchElementException {
         checkIndex(idx);
-        int result = array[idx];
+        int result = buffer[idx];
         for (int i = idx; i < size - 1; ++i) {
-            array[i] = array[i + 1];
+            buffer[i] = buffer[i + 1];
         }
         --size;
         return result;
@@ -56,6 +53,6 @@ public class MyArrayList extends List {
     @Override
     int get(int idx) throws NoSuchElementException {
         checkIndex(idx);
-        return array[idx];
+        return buffer[idx];
     }
 }
