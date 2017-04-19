@@ -41,7 +41,7 @@ public class HttpHelloWorld extends AbstractHandler {
 //            File imageFile = new File(this.getClass().getResource("/images/service.png").getFile());
 //            response.setHeader("Content-Type", "image/png");
 //            response.setHeader("Content-Length", String.valueOf(imageFile.length()));
-//            response.setHeader("Content-Disposition", "inline; filename=\"" + imageFile.getName() + "\"");
+//            response.setHeader("Content-Disposition", "inline; filename=\"" + imageFile.getLogin() + "\"");
 //
 //            OutputStream out = response.getOutputStream();
 //

@@ -1,0 +1,6 @@
+2017-04-19 13:21:17 INFO  log:192 - Logging initialized @796ms to org.eclipse.jetty.util.log.Slf4jLog
+2017-04-19 13:21:17 INFO  Server:372 - jetty-9.4.0.RC2
+2017-04-19 13:21:17 WARN  Server:375 - THIS IS NOT A STABLE RELEASE! DO NOT USE IN PRODUCTION!
+2017-04-19 13:21:17 WARN  Server:376 - Download a stable release from http://download.eclipse.org/jetty/
+2017-04-19 13:21:17 INFO  AbstractConnector:280 - Started ServerConnector@1a25848{HTTP/1.1,[http/1.1]}{0.0.0.0:8082}
+2017-04-19 13:21:17 INFO  Server:444 - Started @1145ms

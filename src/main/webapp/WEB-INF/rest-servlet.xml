@@ -13,10 +13,10 @@
 
     <!-- Откуда брать шаблоны для построения View (В данном случае это jsp страницы) -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
-        <property name="prefix">
+        <property login="prefix">
             <value>/WEB-INF/views/jsp/</value>
         </property>
-        <property name="suffix">
+        <property login="suffix">
             <value>.jsp</value>
         </property>
     </bean>

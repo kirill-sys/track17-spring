@@ -5,12 +5,15 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.util.Arrays;
+import java.util.HashMap;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import track.msgtest.messenger.User;
 import track.msgtest.messenger.messages.Message;
+import track.msgtest.messenger.store.MessageStore;
+import track.msgtest.messenger.store.UserStore;
 
 
 /**
@@ -19,7 +22,11 @@ import track.msgtest.messenger.messages.Message;
  * Сетевая часть привязывает нас к определнному соединению по сети (от клиента)
  */
 public class Session implements Runnable {
-    static Logger log = LoggerFactory.getLogger(Session.class);
+    private static Logger log = LoggerFactory.getLogger(Session.class);
+    private static volatile HashMap<Long, Session> userSessionMap;
+
+    private UserStore userStore;
+    private MessageStore messageStore;
 
     private User user;
     private Socket socket;

@@ -9,18 +9,18 @@
     <!--<bean id="messageHandler" class="track.spring.server.MessageHandler"/>-->
 
     <!--<bean id="socketServer" class="track.spring.server.SocketServer" init-method="init">-->
-        <!--<property name="handler" ref="messageHandler"/>-->
-        <!--<property name="port" value="19000"/>-->
-        <!--<property name="poolSize" value="20"/>-->
+        <!--<property login="handler" ref="messageHandler"/>-->
+        <!--<property login="port" value="19000"/>-->
+        <!--<property login="poolSize" value="20"/>-->
     <!--</bean>-->
 
 
     <!-- 2) Отдельно вынесенные настройки -->
 
     <!--<bean id="socketServer" class="track.spring.server.SocketServer">-->
-        <!--<property name="handler" ref="messageHandler"/>-->
-        <!--<property name="port" value="${port}"/>-->
-        <!--<property name="poolSize" value="${poolSize}"/>-->
+        <!--<property login="handler" ref="messageHandler"/>-->
+        <!--<property login="port" value="${port}"/>-->
+        <!--<property login="poolSize" value="${poolSize}"/>-->
     <!--</bean>-->
 
 

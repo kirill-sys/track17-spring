@@ -4,36 +4,36 @@ package track.msgtest.messenger.messages;
  *
  */
 public class LoginMessage extends Message {
-    private String name;
-    private String pass;
+    private String login;
+    private String password;
 
-    public LoginMessage(String name, String pass) {
+    public LoginMessage(String login, String password) {
         type = Type.MSG_LOGIN;
-        this.name = name;
-        this.pass = pass;
+        this.login = login;
+        this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getLogin() {
+        return login;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLogin(String login) {
+        this.login = login;
     }
 
-    public String getPass() {
-        return pass;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPass(String pass) {
-        this.pass = pass;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
     public String toString() {
         return "LoginMessage{" +
-                "name='" + name + '\'' +
-                ", pass='" + pass + '\'' +
+                "login='" + login + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
 }

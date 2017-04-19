@@ -13,7 +13,7 @@ public class SimpleThread {
 
 //        System.out.println(TimeUnit.DAYS.toMillis(1));
 
-//        System.out.println(Thread.currentThread().getName());
+//        System.out.println(Thread.currentThread().getLogin());
 //        MyThread thread = new MyThread(10);
 //        thread.start(); // magic!
 //
