@@ -50,14 +50,6 @@ public class MessengerServer {
             SocketAddress clientAddress = clntSock.getRemoteSocketAddress();
             log.info("Handling client at " + clientAddress);
             pool.execute(new Session(clntSock, new StringProtocol(), userStore, messageStore));
-            /*
-            InputStream in = clntSock.getInputStream();
-            OutputStream out = clntSock.getOutputStream();
-            while ((recvMsgSize = in.read(recieveBuf)) != -1) {
-                out.write(recieveBuf, 0, recvMsgSize);
-            }
-            clntSock.close();
-            */
         }
     }
 }

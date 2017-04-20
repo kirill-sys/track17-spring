@@ -1,29 +1,40 @@
-2017-04-20 17:28:50 INFO  MessengerClient:81 - Starting listener thread...
-2017-04-20 17:29:23 INFO  MessengerClient:116 - Tokens: [/login, kirill, password]
-2017-04-20 17:29:23 INFO  MessengerClient:157 - LoginMessage{login='kirill', password='password'}
-2017-04-20 17:29:23 INFO  StringProtocol:67 - encoded: MSG_LOGIN;kirill;password;
-2017-04-20 17:29:23 INFO  StringProtocol:21 - decoded: MSG_STATUS;false;
-2017-04-20 17:29:23 INFO  MessengerClient:107 - Message received: track.msgtest.messenger.messages.StatusMes2017-2017-04-20 17:29:43 INFO  StringProtocol:21 - decoded: MSG_TEXT;1;hello kirill;
-2017-04-20 17:29:43 INFO  MessengerClient:107 - Message received: TextMessage{text='hello kirill'}
-ill'}
-tringProtocol:67 - encoded: MSG_TEXT;1;hello kirill;
-2017-04-20 17:29:43 INFO  StringProtocol:21 - decoded: MSG_TEXT;1;hello kirill;
-2017-04-20 17:29:43 INFO  MessengerClient:107 - Message received: TextMessage{text='hello kirill'}
-9:04 INFO  StringProtocol:21 - decoded: MSG_LOGIN;kirill;password;
-2017-04-20 17:29:04 INFO  Session:59 - Send, track.msgtest.messenger.messages.StatusMessage@11c1384
-2017-04-20 17:29:04 INFO  StringProtocol:67 - encoded: MSG_STATUS;true;
-2017-04-20 17:29:12 INFO  StringProtocol:21 - decoded: MSG_LOGIN;admin1;admin1;
-2017-04-20 17:29:12 INFO  Session:59 - Send, track.msgtest.messenger.messages.StatusMessage@17cb759
-2017-04-20 17:29:12 INFO  StringProtocol:67 - encoded: MSG_STATUS;true;
-2017-04-20 17:29:23 INFO  StringProtocol:21 - decoded: MSG_LOGIN;kirill;password;
-2017-04-20 17:29:23 INFO  Session:59 - Send, track.msgtest.messenger.messages.StatusMessage@18d78bb
-2017-04-20 17:29:23 INFO  StringProtocol:67 - encoded: MSG_STATUS;false;
-2017-04-20 17:29:43 INFO  StringProtocol:21 - decoded: MSG_TEXT;1;hello kirill;
-2017-04-20 17:29:43 INFO  Session:108 - /text received, TextMessage{text='hello kirill'}
-2017-04-20 17:29:43 INFO  Session:111 - [1, 2, 3]
-2017-04-20 17:29:43 INFO  Session:59 - Send, TextMessage{text='hello kirill'}
-2017-04-20 17:29:43 INFO  StringProtocol:67 - encoded: MSG_TEXT;1;hello kirill;
-2017-04-20 17:29:43 INFO  Session:59 - Send, TextMessage{text='hello kirill'}
-2017-04-20 17:29:43 INFO  StringProtocol:67 - encoded: MSG_TEXT;1;hello kirill;
-2017-04-20 17:29:43 INFO  Session:59 - Send, TextMessage{text='hello kirill'}
-2017-04-20 17:29:43 INFO  StringProtocol:67 - encoded: MSG_TEXT;1;hello kirill;
+2017-04-20 19:46:20 INFO  MessengerClient:81 - Starting listener thread...
+2017-04-20 19:48:12 INFO  MessengerClient:116 - Tokens: [/text, 1, qwerty]
+2017-04-20 19:48:12 INFO  MessengerClient:157 - TextMessage{text='qwerty'}
+2017-04-20 19:48:12 INFO  StringProtocol:67 - encoded: MSG_TEXT;1;qwerty;
+2017-04-20 19:48:12 INFO  StringProtocol:21 - decoded: MSG_STATUS;false;
+2017-04-20 19:48:12 INFO  MessengerClient:107 - Message received: track.msgtest.messenger.messages.StatusMessage@d6f47c
+r.messages.StatusMessage@1c8c58f
+-20 19:47:06 INFO  StringProtocol:21 - decoded: MSG_TEXT;1;hello;
+2017-04-20 19:47:06 INFO  MessengerClient:107 - Message received: TextMessage{text='hello'}
+2017-04-20 19:47:43 INFO  MessengerClient:116 - Tokens: [/text, 1, hello]
+2017-04-20 19:47:43 INFO  MessengerClient:157 - TextMessage{text='hello'}
+2017-04-20 19:47:43 INFO  StringProtocol:67 - encoded: MSG_TEXT;1;hello;
+2017-04-20 19:47:43 INFO  StringProtocol:21 - decoded: MSG_TEXT;1;hello;
+2017-04-20 19:47:43 INFO  MessengerClient:107 - Message received: TextMessage{text='hello'}
+nMessage{login='kirill', password='password'}
+2017-04-20 19:46:59 INFO  StringProtocol:67 - encoded: MSG_LOGIN;kirill;password;
+2017-04-20 19:46:59 INFO  StringProtocol:21 - decoded: MSG_STATUS;true;
+2017-04-20 19:46:59 INFO  MessengerClient:107 - Message received: track.msgtest.messenger.messages.StatusMessage@1fd8dfc
+2017-04-20 19:47:06 INFO  MessengerClient:116 - Tokens: [/text, 1, hello]
+2017-04-20 19:47:06 INFO  MessengerClient:157 - TextMessage{text='hello'}
+2017-04-20 19:47:06 INFO  StringProtocol:67 - encoded: MSG_TEXT;1;hello;
+2017-04-20 19:47:06 INFO  StringProtocol:21 - decoded: MSG_TEXT;1;hello;
+2017-04-20 19:47:06 INFO  MessengerClient:107 - Message received: TextMessage{text='hello'}
+2017-04-20 19:47:43 INFO  StringProtocol:21 - decoded: MSG_TEXT;1;hello;
+2017-04-20 19:47:43 INFO  MessengerClient:107 - Message received: TextMessage{text='hello'}
+d: MSG_TEXT;1;hello;
+2017-04-20 19:47:06 INFO  Session:61 - Send, TextMessage{text='hello'}
+2017-04-20 19:47:06 INFO  StringProtocol:67 - encoded: MSG_TEXT;1;hello;
+2017-04-20 19:47:36 INFO  StringProtocol:21 - decoded: MSG_LOGIN;admin1;admin1;
+2017-04-20 19:47:36 INFO  Session:61 - Send, track.msgtest.messenger.messages.StatusMessage@1db7a6c
+2017-04-20 19:47:36 INFO  StringProtocol:67 - encoded: MSG_STATUS;true;
+2017-04-20 19:47:43 INFO  StringProtocol:21 - decoded: MSG_TEXT;1;hello;
+2017-04-20 19:47:43 INFO  Session:13 - /text received, TextMessage{text='hello'}
+2017-04-20 19:47:43 INFO  Session:61 - Send, TextMessage{text='hello'}
+2017-04-20 19:47:43 INFO  StringProtocol:67 - encoded: MSG_TEXT;1;hello;
+2017-04-20 19:47:43 INFO  Session:61 - Send, TextMessage{text='hello'}
+2017-04-20 19:47:43 INFO  StringProtocol:67 - encoded: MSG_TEXT;1;hello;
+2017-04-20 19:48:12 INFO  StringProtocol:21 - decoded: MSG_TEXT;1;qwerty;
+2017-04-20 19:48:12 INFO  Session:61 - Send, track.msgtest.messenger.messages.StatusMessage@18911d3
+2017-04-20 19:48:12 INFO  StringProtocol:67 - encoded: MSG_STATUS;false;

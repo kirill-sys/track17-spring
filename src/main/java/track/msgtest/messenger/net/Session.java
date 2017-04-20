@@ -14,6 +14,8 @@ import org.slf4j.LoggerFactory;
 
 import track.msgtest.messenger.User;
 import track.msgtest.messenger.messages.*;
+import track.msgtest.messenger.net.handlers.Controller;
+import track.msgtest.messenger.net.handlers.HandlingException;
 import track.msgtest.messenger.store.MessageStore;
 import track.msgtest.messenger.store.UserStore;
 
@@ -71,12 +73,13 @@ public class Session implements Runnable {
             out.close();
             socket.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error("Couldn't close socket, {}", e);
         }
     }
 
     @Override
     public void run() {
+        Controller controller = new Controller();
         while (isActive) {
             try {
                 int readBytes = in.read(buffer);
@@ -99,47 +102,53 @@ public class Session implements Runnable {
                     send(newMsg);
                     continue;
                 }
-                if (user == null) {
-                    login((LoginMessage) msg);
-                    continue;
-                }
-                switch (msg.getType()) {
-                    case MSG_TEXT:
-                        log.info("/text received, {}", msg);
-                        TextMessage txtMsg = (TextMessage) msg;
-                        List<Long> targets =  messageStore.getUsersIdFromChat(txtMsg.getSenderId());
-                        log.info(targets.toString());
-                        for (Long targetId : targets) {
-                            if (userSessionMap.containsKey(targetId)) {
-                                userSessionMap.get(targetId).send(txtMsg);
-                            }
-                        }
-                        break;
-                    default:
-                        log.error("Wrong message type, {}", msg);
+                try {
+                    controller.handler(msg.getType()).handle(this, msg);
+                } catch (HandlingException e) {
+                    log.error("Handling exception, need correction, {}, msg {}", e, msg);
                 }
             } catch (Exception e) {
                 isActive = false;
                 log.error("Session failed: ", e);
             }
         }
+        close();
     }
 
-    private void login(LoginMessage msg) throws SQLException, IOException, ProtocolException {
-        User user = userStore.getUser(msg.getLogin(), msg.getPassword());
-        if (user == null || userSessionMap.containsKey(user.getId())) {
-            StatusMessage newMsg = new StatusMessage(false);
-            newMsg.setType(Type.MSG_STATUS);
-            send(newMsg);
-        } else {
-            StatusMessage newMsg = new StatusMessage(true);
-            newMsg.setType(Type.MSG_STATUS);
-            send(newMsg);
-            if (this.user != null) {
-                userSessionMap.remove(this.user.getId(),this);
-            }
-            this.user = user;
-            userSessionMap.put(user.getId(), this);
-        }
+    public UserStore getUserStore() {
+        return userStore;
     }
+
+    public MessageStore getMessageStore() {
+        return messageStore;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void addToHash(Long id, Session session) {
+        userSessionMap.put(id, this);
+    }
+
+    public void removeFromHash(Long id) {
+        userSessionMap.remove(id);
+    }
+
+    public boolean hashContainsKey(Long id) {
+        return userSessionMap.containsKey(id);
+    }
+
+    public Session hashGet(Long id) {
+        return userSessionMap.get(id);
+    }
+
+    public Logger getLog() {
+        return log;
+    }
+
 }
