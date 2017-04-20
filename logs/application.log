@@ -1,6 +1,29 @@
-2017-04-19 13:21:17 INFO  log:192 - Logging initialized @796ms to org.eclipse.jetty.util.log.Slf4jLog
-2017-04-19 13:21:17 INFO  Server:372 - jetty-9.4.0.RC2
-2017-04-19 13:21:17 WARN  Server:375 - THIS IS NOT A STABLE RELEASE! DO NOT USE IN PRODUCTION!
-2017-04-19 13:21:17 WARN  Server:376 - Download a stable release from http://download.eclipse.org/jetty/
-2017-04-19 13:21:17 INFO  AbstractConnector:280 - Started ServerConnector@1a25848{HTTP/1.1,[http/1.1]}{0.0.0.0:8082}
-2017-04-19 13:21:17 INFO  Server:444 - Started @1145ms
+2017-04-20 17:28:50 INFO  MessengerClient:81 - Starting listener thread...
+2017-04-20 17:29:23 INFO  MessengerClient:116 - Tokens: [/login, kirill, password]
+2017-04-20 17:29:23 INFO  MessengerClient:157 - LoginMessage{login='kirill', password='password'}
+2017-04-20 17:29:23 INFO  StringProtocol:67 - encoded: MSG_LOGIN;kirill;password;
+2017-04-20 17:29:23 INFO  StringProtocol:21 - decoded: MSG_STATUS;false;
+2017-04-20 17:29:23 INFO  MessengerClient:107 - Message received: track.msgtest.messenger.messages.StatusMes2017-2017-04-20 17:29:43 INFO  StringProtocol:21 - decoded: MSG_TEXT;1;hello kirill;
+2017-04-20 17:29:43 INFO  MessengerClient:107 - Message received: TextMessage{text='hello kirill'}
+ill'}
+tringProtocol:67 - encoded: MSG_TEXT;1;hello kirill;
+2017-04-20 17:29:43 INFO  StringProtocol:21 - decoded: MSG_TEXT;1;hello kirill;
+2017-04-20 17:29:43 INFO  MessengerClient:107 - Message received: TextMessage{text='hello kirill'}
+9:04 INFO  StringProtocol:21 - decoded: MSG_LOGIN;kirill;password;
+2017-04-20 17:29:04 INFO  Session:59 - Send, track.msgtest.messenger.messages.StatusMessage@11c1384
+2017-04-20 17:29:04 INFO  StringProtocol:67 - encoded: MSG_STATUS;true;
+2017-04-20 17:29:12 INFO  StringProtocol:21 - decoded: MSG_LOGIN;admin1;admin1;
+2017-04-20 17:29:12 INFO  Session:59 - Send, track.msgtest.messenger.messages.StatusMessage@17cb759
+2017-04-20 17:29:12 INFO  StringProtocol:67 - encoded: MSG_STATUS;true;
+2017-04-20 17:29:23 INFO  StringProtocol:21 - decoded: MSG_LOGIN;kirill;password;
+2017-04-20 17:29:23 INFO  Session:59 - Send, track.msgtest.messenger.messages.StatusMessage@18d78bb
+2017-04-20 17:29:23 INFO  StringProtocol:67 - encoded: MSG_STATUS;false;
+2017-04-20 17:29:43 INFO  StringProtocol:21 - decoded: MSG_TEXT;1;hello kirill;
+2017-04-20 17:29:43 INFO  Session:108 - /text received, TextMessage{text='hello kirill'}
+2017-04-20 17:29:43 INFO  Session:111 - [1, 2, 3]
+2017-04-20 17:29:43 INFO  Session:59 - Send, TextMessage{text='hello kirill'}
+2017-04-20 17:29:43 INFO  StringProtocol:67 - encoded: MSG_TEXT;1;hello kirill;
+2017-04-20 17:29:43 INFO  Session:59 - Send, TextMessage{text='hello kirill'}
+2017-04-20 17:29:43 INFO  StringProtocol:67 - encoded: MSG_TEXT;1;hello kirill;
+2017-04-20 17:29:43 INFO  Session:59 - Send, TextMessage{text='hello kirill'}
+2017-04-20 17:29:43 INFO  StringProtocol:67 - encoded: MSG_TEXT;1;hello kirill;

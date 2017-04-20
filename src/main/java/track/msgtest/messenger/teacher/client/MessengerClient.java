@@ -160,6 +160,7 @@ public class MessengerClient {
     }
 
     public static void main(String[] args) throws Exception {
+        Socket socket = new Socket("localhost", 8000);
         if (args.length != 2) {
             throw new IllegalArgumentException("Parameters: <Server> <Port>");
         }

@@ -84,7 +84,7 @@ public class UserStore {
     }
 
     public void updateUser(long id, User user) {
-        String url = "UPDATE users SET name=?, age=? WHERE id=?";
+        String url = "UPDATE users SET login=?, age=? WHERE id=?";
         PreparedStatement stmt = null;
         try {
 

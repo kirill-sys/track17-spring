@@ -15,7 +15,7 @@ public class JdbcExample {
 
     static Logger log = LoggerFactory.getLogger(JdbcExample.class);
 
-    public static final String PATH_TO_DB = "/Users/dmirty/Dima/track17-spring/track17-spring/track.sqlite";
+    public static final String PATH_TO_DB = "/Users/dmirty/Dima/track17-spring/track17-spring/track.db";
 
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
 

@@ -27,6 +27,12 @@ public interface MessageStore {
     Message getMessageById(Long messageId);
 
     /**
+     * получаем список ид пользователей заданного чата
+     */
+    List<Long> getUsersIdFromChat(Long chatId);
+
+
+    /**
      * Добавить сообщение в чат
      */
     void addMessage(Long chatId, Message message);
